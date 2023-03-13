@@ -1,20 +1,29 @@
 html, body{
     font-size: 62.5%;
     background-color: antiquewhite;
+    width: 100%;
+}
+:root {
+    --full: 100%;
+    --half: 50%;
 }
 body{
     background-color: rgb(237, 229, 229);
-    margin: 5rem;
+    margin: 2%;
+    /* margin: 0; */
+    box-sizing: border-box;
+    width: 96%;
+    /* padding: 5rem; */
     border-radius: 2%;
-    display: inline-grid;
+    display: grid;
     justify-items: center;
     grid-template: 
     "top-nav" 13rem
     "main-section" 130rem
     "below-area" 43rem
-    /183rem;
+    /96%;
 }
-a:link, :visited,:active, :hover {
+a:link, :visited, :active, :hover{
     text-decoration: none;
     color: unset;
   }
@@ -24,6 +33,7 @@ a:link, :visited,:active, :hover {
 nav.top-nav{
     grid-area: top-nav;
     display: flex;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     /* justify-content: flex-start; */
@@ -32,8 +42,10 @@ nav.top-nav{
 }
 nav a.top-name{
     font-size: 3.2rem;
+    /* font-size: 2vw; */
     margin-top: 4.25rem;
-    margin-left: 3.5rem;
+    /* margin-left: 3.5rem; */
+    margin-left: 12%;
     /* display: inline; */
     /* justify-self: start; */
 }
@@ -41,7 +53,7 @@ nav img.icon-home-image{
     /* display: flex; */
     width: 6.4rem;
     margin-top: 3.3rem;
-    margin-left: 135rem;
+    margin-left: 75%;
     /* justify-items: flex-end; */
     justify-self: end;
 }
@@ -49,7 +61,7 @@ nav img.icon-works-image{
     /* display: flex; */
     width: 6.4rem;
     margin-top: 3.3rem;
-    margin-left: 1.8rem;
+    margin-left: 5%;
     justify-self: end;
 }
 
@@ -60,12 +72,14 @@ div.main-section{
     grid-template: 
     "left-intro right-photo" 77rem
     "left-tagline right-about" 53rem
-    /91.5rem 91.5rem;
+    /* /91.5rem 91.5rem; */
+    /1fr 1fr;
 }
 
     /* Left Section */
         section.left-section{
             display: inline-block;
+            width: 1fr;
         }
         div.intro{
             margin-top: 17rem;
@@ -75,7 +89,8 @@ div.main-section{
             "title" 14.5rem
             "name" 4.5rem
             "description" 7rem
-            /91.5rem;
+            /* /91.5rem; */
+            /1fr;
         }
             p.title{
                 margin-left: 8.5rem;
@@ -106,9 +121,11 @@ div.main-section{
     /* Right Section */
         section.right-section{
             display: inline-block;
+            /* width: 1fr; */
         }
         img.profile-photo{
             grid-area: right-photo;
+            width: var(--full);
         }
         p.about-me{
             grid-area: right-about;
