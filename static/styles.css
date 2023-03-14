@@ -1,0 +1,166 @@
+html, body{
+    font-size: 62.5%;
+    background-color: antiquewhite;
+    width: 100%;
+}
+:root {
+    --full: 100%;
+    --half: 50%;
+}
+body{
+    background-color: rgb(237, 229, 229);
+    margin: 2%;
+    /* margin: 0; */
+    box-sizing: border-box;
+    width: 96%;
+    /* padding: 5rem; */
+    border-radius: 2%;
+    display: grid;
+    justify-items: center;
+    grid-template: 
+    "top-nav" 13rem
+    "main-section" 130rem
+    "below-area" 43rem
+    /96%;
+}
+a:link, :visited, :active, :hover{
+    text-decoration: none;
+    color: unset;
+  }
+  
+
+/* Top Navigation Bar */
+nav.top-nav{
+    grid-area: top-nav;
+    display: flex;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* justify-content: flex-start; */
+    justify-items: start;
+    /* flex-wrap: nowrap; */
+}
+nav a.top-name{
+    font-size: 3.2rem;
+    /* font-size: 2vw; */
+    margin-top: 4.25rem;
+    /* margin-left: 3.5rem; */
+    margin-left: 12%;
+    /* display: inline; */
+    /* justify-self: start; */
+}
+nav img.icon-home-image{
+    /* display: flex; */
+    width: 6.4rem;
+    margin-top: 3.3rem;
+    margin-left: 75%;
+    /* justify-items: flex-end; */
+    justify-self: end;
+}
+nav img.icon-works-image{
+    /* display: flex; */
+    width: 6.4rem;
+    margin-top: 3.3rem;
+    margin-left: 5%;
+    justify-self: end;
+}
+
+/* Main Area */
+div.main-section{
+    grid-area: main-section;
+    display: grid;
+    grid-template: 
+    "left-intro right-photo" 77rem
+    "left-tagline right-about" 53rem
+    /* /91.5rem 91.5rem; */
+    /1fr 1fr;
+}
+
+    /* Left Section */
+        section.left-section{
+            display: inline-block;
+            width: 1fr;
+        }
+        div.intro{
+            margin-top: 17rem;
+            grid-area: left-intro;
+            display: grid;
+            grid-template: 
+            "title" 14.5rem
+            "name" 4.5rem
+            "description" 7rem
+            /* /91.5rem; */
+            /1fr;
+        }
+            p.title{
+                margin-left: 8.5rem;
+                font-size: 3rem;
+                grid-area: title;
+            }
+            p.intro-name{
+                margin-left: 8.5rem;
+                font-size: 2rem;
+                grid-area: name;
+            }
+            p.intro-text{
+                margin-left: 8.5rem;
+                font-size: 2rem;
+                grid-area: description;
+            }
+        p.tagline-text{
+            grid-area: left-tagline;
+            margin: 0;
+            padding: 0;
+            margin-top: 47rem; /*should be modified to obey grid rules */
+            margin-left: 27.5rem;
+            font-size: 4.4rem;
+            width: 43rem;
+            text-align: justify;
+        }
+
+    /* Right Section */
+        section.right-section{
+            display: inline-block;
+            /* width: 1fr; */
+        }
+        img.profile-photo{
+            grid-area: right-photo;
+            width: var(--full);
+        }
+        p.about-me{
+            grid-area: right-about;
+            margin-top: 13rem;
+            margin-left: 5.5rem;
+            font-size: 2rem;
+            height: 23rem;
+        }
+        p.copyright{
+            grid-area: right-about;
+            margin-top: 4rem;
+            margin-left: 5.5rem;
+            font-size: 3rem;
+        }
+
+/* Below Area */
+section.below-area{
+    font-size: 3rem;
+    grid-area: below-area;
+    margin-top: 6.5rem;
+    margin-left: 28rem;
+    display: flex;
+    flex-wrap: nowrap;
+}
+p.recent-works{
+    display: block;
+}
+div.work-1-wrapper, div.work-2-wrapper, div.work-3-wrapper{
+    display: inline-block;
+}
+section.below-area div.recent-works-frame{
+    flex-wrap: nowrap;
+    margin-top: 10.5rem;
+    justify-items: center;
+}
+section.below-area img{
+    width: 26rem;
+}
