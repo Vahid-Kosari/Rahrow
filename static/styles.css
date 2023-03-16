@@ -1,166 +1,145 @@
-html, body{
+html{
     font-size: 62.5%;
     background-color: antiquewhite;
-    width: 100%;
-}
-:root {
-    --full: 100%;
-    --half: 50%;
 }
 body{
     background-color: rgb(237, 229, 229);
-    margin: 2%;
-    /* margin: 0; */
-    box-sizing: border-box;
-    width: 96%;
-    /* padding: 5rem; */
+    margin: 5rem;
+    width: 183rem;
+    margin: auto;
     border-radius: 2%;
+    position: relative;
     display: grid;
-    justify-items: center;
     grid-template: 
     "top-nav" 13rem
     "main-section" 130rem
     "below-area" 43rem
-    /96%;
+    /183rem;
 }
 a:link, :visited, :active, :hover{
     text-decoration: none;
     color: unset;
   }
   
-
 /* Top Navigation Bar */
 nav.top-nav{
     grid-area: top-nav;
-    display: flex;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /* justify-content: flex-start; */
-    justify-items: start;
-    /* flex-wrap: nowrap; */
+    display: grid;
+    grid-template: 
+    "nam khan projs" 1fr
+    /161.3rem 8.2rem 6.4rem;
 }
 nav a.top-name{
+    grid-area: nam;
     font-size: 3.2rem;
-    /* font-size: 2vw; */
-    margin-top: 4.25rem;
-    /* margin-left: 3.5rem; */
-    margin-left: 12%;
-    /* display: inline; */
-    /* justify-self: start; */
+    margin-top: 4.2rem;
+    margin-left: 6.5rem;
 }
 nav img.icon-home-image{
-    /* display: flex; */
+    display: none;
+    grid-area: khan;
     width: 6.4rem;
     margin-top: 3.3rem;
-    margin-left: 75%;
-    /* justify-items: flex-end; */
-    justify-self: end;
 }
-nav img.icon-works-image{
-    /* display: flex; */
+nav img.icon-projects-image{
+    display: none;
+    grid-area: projs;
     width: 6.4rem;
     margin-top: 3.3rem;
-    margin-left: 5%;
-    justify-self: end;
 }
 
 /* Main Area */
 div.main-section{
     grid-area: main-section;
+    position: relative;
     display: grid;
     grid-template: 
     "left-intro right-photo" 77rem
     "left-tagline right-about" 53rem
-    /* /91.5rem 91.5rem; */
     /1fr 1fr;
 }
 
     /* Left Section */
-        section.left-section{
-            display: inline-block;
-            width: 1fr;
+    div.intro{
+        grid-area: left-intro;
+        display: grid;
+        margin-top: 17rem;
+        grid-template: 
+        "title" 14.5rem
+        "name" 4.5rem
+        "description" 7rem
+        /1fr;
+    }
+        p.title{
+            grid-area: title;
+            margin-left: 8.5rem;
+            font-size: 3rem;
         }
-        div.intro{
-            margin-top: 17rem;
-            grid-area: left-intro;
-            display: grid;
-            grid-template: 
-            "title" 14.5rem
-            "name" 4.5rem
-            "description" 7rem
-            /* /91.5rem; */
-            /1fr;
+        p.intro-name{
+            display: none;
+            grid-area: name;
+            margin-left: 8.5rem;
+            font-size: 2rem;
         }
-            p.title{
-                margin-left: 8.5rem;
-                font-size: 3rem;
-                grid-area: title;
-            }
-            p.intro-name{
-                margin-left: 8.5rem;
-                font-size: 2rem;
-                grid-area: name;
-            }
-            p.intro-text{
-                margin-left: 8.5rem;
-                font-size: 2rem;
-                grid-area: description;
-            }
+        p.intro-text{
+            grid-area: description;
+            margin: 0;
+            margin-left: 8.5rem;
+            margin-right: 5.5rem;
+            font-size: 3rem;
+            text-align: justify;
+        }
         p.tagline-text{
             grid-area: left-tagline;
-            margin: 0;
-            padding: 0;
-            margin-top: 47rem; /*should be modified to obey grid rules */
+            position: absolute;
+            top: 13rem;
+            margin-top: 0;
             margin-left: 27.5rem;
             font-size: 4.4rem;
             width: 43rem;
-            text-align: justify;
+            text-align: center  ;
         }
 
     /* Right Section */
-        section.right-section{
-            display: inline-block;
-            /* width: 1fr; */
-        }
-        img.profile-photo{
-            grid-area: right-photo;
-            width: var(--full);
-        }
-        p.about-me{
-            grid-area: right-about;
-            margin-top: 13rem;
-            margin-left: 5.5rem;
-            font-size: 2rem;
-            height: 23rem;
-        }
-        p.copyright{
-            grid-area: right-about;
-            margin-top: 4rem;
-            margin-left: 5.5rem;
-            font-size: 3rem;
-        }
+    img.profile-photo{
+        grid-area: right-photo;
+    }
+    p.about-me{
+        grid-area: right-about;
+        position: absolute;
+        top: 13rem;
+        margin: 0;
+        margin-left: 5.5rem;
+        margin-right: 5.5rem;
+        font-size: 2.5rem;
+        height: 23rem;
+        text-align: justify;
+    }
 
 /* Below Area */
 section.below-area{
+    position: absolute;;
     font-size: 3rem;
     grid-area: below-area;
-    margin-top: 6.5rem;
-    margin-left: 28rem;
-    display: flex;
-    flex-wrap: nowrap;
+    top: 6.5rem;
+    left: 28rem;
 }
-p.recent-works{
-    display: block;
+p.recent-projects{
+    margin: 0;
 }
-div.work-1-wrapper, div.work-2-wrapper, div.work-3-wrapper{
+section.below-area div.recent-projects-frame{
+    top: 10.5rem;
+    margin-left: 25rem;
     display: inline-block;
 }
-section.below-area div.recent-works-frame{
-    flex-wrap: nowrap;
-    margin-top: 10.5rem;
-    justify-items: center;
+div.project-1-wrapper, div.project-2-wrapper, div.project-3-wrapper{
+    display: inline-block;
 }
 section.below-area img{
     width: 26rem;
+}
+p.copyright{
+    display: inline-block;
+    margin-left: 20rem;
+    font-size: 3rem;
 }
