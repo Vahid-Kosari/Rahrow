@@ -26,7 +26,15 @@ SECRET_KEY = 'django-insecure-irhdq6qbmj5frjjeln4s+g(8nbh%p(i6epg!qk6%dhvt6s$qzx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "rahrow.ca",
+    "www.rahrow.ca",
+    "rahrow.info",
+    "www.rahrow.info",
+    "127.0.0.1",
+    "142.93.149.109",
+    "localhost"
+]
 
 
 # Application definition
