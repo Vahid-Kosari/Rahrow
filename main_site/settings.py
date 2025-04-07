@@ -36,6 +36,12 @@ ALLOWED_HOSTS = [
     "localhost"
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://rahrow.ca",
+    "https://www.rahrow.ca",
+    "https://rahrow.info",
+    "https://www.rahrow.info",
+]
 
 # Application definition
 
