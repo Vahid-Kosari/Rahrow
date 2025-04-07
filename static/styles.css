@@ -1,19 +1,20 @@
 html{
     font-size: 62.5%;
     background-color: antiquewhite;
+    /* height: 100%; */
 }
 body{
     background-color: rgb(237, 229, 229);
-    margin: 5rem;
     width: 183rem;
-    margin: auto;
+    /* margin: 5rem auto; */
+    margin: 2.55% auto;
     border-radius: 2%;
     position: relative;
     display: grid;
     grid-template: 
-    "top-nav" 13rem
-    "main-section" 130rem
-    "below-area" 43rem
+    "top-nav" /* 7% /* 6.63% */13rem
+    "main-section" /* 70% /* 66.33% */130rem
+    "below-area" /* 23% /* 21.94% */43rem
     /183rem;
 }
 a:link, :visited, :active, :hover{
@@ -26,26 +27,40 @@ nav.top-nav{
     grid-area: top-nav;
     display: grid;
     grid-template: 
-    "nam khan projs" 1fr
-    /161.3rem 8.2rem 6.4rem;
+    "nam ... khan ... projs ..." 1fr
+    /25rem 136.3rem 6.4rem 1.8rem 6.4rem auto;
 }
-nav a.top-name{
+a.top-name{
     grid-area: nam;
     font-size: 3.2rem;
     margin-top: 4.2rem;
     margin-left: 6.5rem;
+    display: inline-block;
+    filter: drop-shadow(-2px -1px rgba(128, 128, 128, 0.66));
 }
-nav img.icon-home-image{
+img.icon-home-image{
     display: none;
     grid-area: khan;
     width: 6.4rem;
     margin-top: 3.3rem;
+    display: inline-block;
 }
-nav img.icon-projects-image{
+img.icon-projects-image{
     display: none;
     grid-area: projs;
     width: 6.4rem;
     margin-top: 3.3rem;
+    display: inline-block;
+}
+
+/* Main Area */
+div.main-section{
+    grid-area: main-section;
+}
+
+/* Main Area */
+div.main-section{
+    grid-area: main-section;
 }
 
 /* Main Area */
@@ -97,7 +112,8 @@ div.main-section{
             margin-left: 27.5rem;
             font-size: 4.4rem;
             width: 43rem;
-            text-align: center  ;
+            text-align: center;
+            filter: drop-shadow(-2px 2px rgba(128, 128, 128, 0.66));
         }
 
     /* Right Section */
@@ -142,4 +158,9 @@ p.copyright{
     display: inline-block;
     margin-left: 20rem;
     font-size: 3rem;
+    filter: drop-shadow(0 2px rgba(128, 128, 128, 0.66));
+}
+
+@media screenand and (max-width: 414px) {
+    
 }
