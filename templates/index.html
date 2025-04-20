@@ -3,93 +3,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vahid Kosari - Web Developer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #4A148C; /* Dark Purple */
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #2E7D32; /* Green */
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 20px;
-            margin: 10px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #4A148C; /* Dark Purple */
-            color: white;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link rel="icon" type="image/png" href="{% static 'images/Icon.png' %}" />
+    <title>Rahrow</title>
 </head>
 <body>
-    <header>
-        <h1>Vahid Kosari - Web Developer</h1>
-    </header>
-
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-        <a href="#blog">Blog</a>
-        <a href="#affiliations">Affiliations</a>
-    </nav>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome! I'm Vahid Kosari, a passionate web developer with a love for creating beautiful and functional websites. With a background in coding and design, I strive to bring ideas to life on the web.</p>
-    </section>
-
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Here are some of my recent projects:</p>
-        <!-- Add your portfolio items here -->
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>If you'd like to get in touch, feel free to reach out via email or connect with me on social media.</p>
-        <!-- Add contact details here -->
-    </section>
-
-    <section id="blog">
-        <h2>Blog</h2>
-        <p>Check out my latest blog posts:</p>
-        <!-- Add your blog posts here -->
-    </section>
-
-    <section id="affiliations">
-        <h2>Affiliations</h2>
-        <p>I'm proud to be associated with the following organizations:</p>
-        <!-- Add your affiliations here -->
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Vahid Kosari</p>
-    </footer>
+    <main class="_0-main-container">
+        <section class="_1-corridor-sec">
+            <p class="corridor-text">
+                This corridor goes to
+                <br>
+                the end of the world, to itself.
+            </p>
+            <img class="corridor-img" src="{% static '/images/corridor_img.png' %}" title="Self" />
+            <div class="corridor-Expalnation-box">
+                <p class="corridor-Expalnation-box-text">
+                        In Parsi language, rahrow has
+                        <br>
+                        two close but different meanings:
+                        <br>
+                        The Corridor
+                        <br>
+                        The Passenger
+                </p>
+                <button class="corridor-Expalnation-box-button">
+                    <p class="corridor-Expalnation-box-button-text">Let's see different aspects of this passenger!</p>
+                </button>
+            </div>
+        </section>
+        <section class="_2-links-sec">
+            <div class="links-box">
+                <span class="links-box-LinkedIn">
+                    <img class="logo" src="{% static '/images/LinkedIn-icon.png' %}"></img>
+                    <a class="link" href="https://www.linkedin.com/in/vahid-kosari">LinkedIn</a>
+                </span>
+                <span class="links-box-Git">
+                    <img class="logo" src="{% static '/images/Git-icon.png' %}"></img>
+                    <a class="link" href="https://github.com/Vahid-Kosari">GitHub</a>
+                </span>
+            </div>
+        </section>
+        <section class="_3-Eng-and-Web-sec">
+            <div class="Eng-and-Web-box">
+                <div class="Eng-and-Web-box-eng">
+                    <span class="Eng-and-Web-box-eng-img-box">
+                        <img class="Eng-and-Web-box-eng-img" src="{% static '/images/Mechanical_eng_img.png' %}">
+                    </span>
+                    <span class="Eng-and-Web-box-eng-info-box">
+                        <p class="the-title">The<br>Mechanical Engineer</p>
+                        <p class="the-brief">I am a sesioned mechanical engineer</p>
+                        <button class="Eng-and-Web-box-button">
+                            <p class="Eng-and-Web-box-button-text">Read More</p>
+                        </button>
+                    </span>
+                </div>
+                <div class="Eng-and-Web-box-web">
+                    <span class="Eng-and-Web-box-web-info-box">
+                        <p class="the-title">The<br>Web Developer</p>
+                        <p class="the-brief">I am a Web Developer</p>
+                        <form action="{% url 'web_projects' %}">
+                            <button class="Eng-and-Web-box-button" type="submit">
+                                <p class="Eng-and-Web-box-button-text">Read More</p>
+                            </button>                          
+                        </form>
+                    </span>
+                    <span class="Eng-and-Web-box-web-img-box">
+                        <img class="Eng-and-Web-box-web-img" src="{% static '/images/Web_developer_img.png' %}">
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section class="_4-FAQ">
+            <p class="FAQ-text">FAQ</p>
+            <div class="FAQ-accardion">
+                <div class="FAQ-accordion first">
+                    <div class="FAQ-accordion-box-q">
+                        <img class="FAQ-accordion-box-q-icon" src="{% static '/images/plus-svgrepo-com.png' %}">
+                        <p class="FAQ-accordion-box-q-text">Who am I?</p>
+                    </div>
+                    <p class="FAQ-accordion-a">I am, who I am.</p>
+                </div>
+                <hr>
+                <div class="FAQ-accordion second">
+                    <div class="FAQ-accordion-box-q">
+                        <img class="FAQ-accordion-box-q-icon" src="{% static '/images/plus-svgrepo-com.png' %}">
+                        <p class="FAQ-accordion-box-q-text">Who am I?</p>
+                    </div>
+                    <p class="FAQ-accordion-a">I am, who I am.</p>
+                </div>
+                <hr>
+                <div class="FAQ-accordion third">
+                    <div class="FAQ-accordion-box-q">
+                        <img class="FAQ-accordion-box-q-icon" src="{% static '/images/plus-svgrepo-com.png' %}">
+                        <p class="FAQ-accordion-box-q-text">Who am I?</p>
+                    </div>
+                    <p class="FAQ-accordion-a">I am, who I am.</p>
+                </div>
+                <hr>
+                <button class="FAQ-accordion-button">
+                    <p class="FAQ-accordion-button-text">Read More</p>
+                </button>
+            </div>
+        </section>
+        <section class="_5-subscription">
+            <div class="subscription-box">
+                <p class="subscription-box-text">Sign up for monthly articles.</p>
+                <button class="subscription-box-button">
+                    <p class="subscription-box-button-text">Get Started</p>
+                </button>
+            </div>
+        </section>
+        <section class="_6-footer">
+            <p class="footer-copyright">© Vahid Kosari {{ year }} {{ month }}</p>
+            <span class="footer-connection">
+                <a class="footer-linkedin" href="https://www.linkedin.com/in/vahid-kosari">LinkedIn</a>
+                <a class="footer-email" href="mailto:vahid59m@yahoo.com">Email</a>
+            </span>
+        </section>
+    </main>
 </body>
 </html>
