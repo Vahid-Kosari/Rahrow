@@ -8,19 +8,22 @@ html {
   }
 
   button {
-    width: 7rem;
+    width: 100%;
+    max-width: 7rem;
     color: white;
     background-color: black;
     border-radius: 0.5rem;
   }
   .corridor-Expalnation-box-button {
-    width: 20rem;
+    width: 100%;
+    max-width: 20rem;
   }
   .btn-link {
     display: inline-block;
     background-color: black;
     color: white;
-    width: 7rem;
+    width: 100%;
+    max-width: 7rem;
     padding: 1px 6px;
     text-align: center;
     text-decoration: none;
@@ -29,7 +32,7 @@ html {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
+  }
 
 .btn-link:hover {
     background-color: gray;
@@ -57,39 +60,42 @@ html {
 /*************************************************/
 /* 1 */
     .corridor-text {
-          display: block;
-          /* max-width: 70%; */
-          justify-self: center;
-          text-align: center;
-          font-size: 3rem;
-          font-weight: bold;
-          color: #333;
-        }
-        .corridor-img {
-            width: 60rem;
-            /* height: 200; */
-            display: block;
-            /* overflow: hidden; */
-            aspect-ratio: 1.7777777777777777 / 1;
-            background-image: url(/* image.png */);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            /* position: absolute; */
-            border-radius: 1.2rem;
-        }
-        .corridor-Expalnation-box {
-          justify-items: center;
-        }
-          .corridor-Expalnation-box-text{
-            width: 50%;
-            text-align: center;
-          }
+      display: block;
+      /* max-width: 70%; */
+      justify-self: center;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .corridor-img {
+      width: 100%;
+      max-width: 60rem;
+      /* height: 200; */
+      display: block;
+      /* overflow: hidden; */
+      aspect-ratio: 1.7777777777777777 / 1;
+      background-image: url(/* image.png */);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      /* position: absolute; */
+      border-radius: 1.2rem;
+    }
+    .corridor-Expalnation-box {
+      justify-items: center;
+    }
+      .corridor-Expalnation-box-text{
+        width: 100%;
+        max-width: 50%;
+        text-align: center;
+      }
 
 /*************************************************/
 /* 2 */
     .links-box {
-      width: 50rem;
+      width: 100%;
+      max-width: 50rem;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
@@ -111,9 +117,10 @@ html {
 /*************************************************/
 /* 3 */
     ._3-Eng-and-Web-sec {
-        width: 75rem;
-        background-color: #f0f0f0;
-      }
+      width: 100%;
+      max-width: 75rem;
+      background-color: #f0f0f0;
+    }
       .Eng-and-Web-box {
         display: flex;
         flex-direction: column;
@@ -131,7 +138,8 @@ html {
         /* gap: 1rem; */
         justify-content: space-evenly;
         height: 20rem;
-        width: 28rem;
+        width: 100%;
+        max-width: 28rem;
       }
         .Eng-and-Web-box-eng, .Eng-and-Web-box-web {
           display: flex;
@@ -162,9 +170,10 @@ html {
         font-weight: bold;
       }
       .FAQ-accardion {
-        --container-width: 60rem;
+        --container-max-width: 60rem;
         --hr-offset: 5rem;
-        width: var(--container-width);
+        width: 100%;
+        max-width: var(--container-max-width);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -173,12 +182,14 @@ html {
         background-color: #f0f0f0;
       }
       hr {
-        width: calc(var(--container-width) - var(--hr-offset));
+        width: 100%;
+        max-width: calc(var(--container-width) - var(--hr-offset));
         transition: width 0.3s ease;
         color: #333;
       }
       .FAQ-accordion-button{
-        width: 10rem;
+        width: 100%;
+        max-width: 10rem;
         align-self: center;
         margin: 3rem;
       }
@@ -191,7 +202,8 @@ html {
         align-items: center;
       }
       .FAQ-accordion-box-q-icon {
-        width: 1.5rem;
+        width: 100%;
+        max-width: 1.5rem;
         padding: 0.5rem;
         vertical-align: middle;
       }
@@ -224,15 +236,16 @@ html {
 /*************************************************/
 /* 5 */
     .subscription-box {
-        width: 75rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        font-size: 2.5rem;
-        font-weight: bold;
-        background-color: #f0f0f0;
-      }
+      width: 100%;
+      max-width: 75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: 2.5rem;
+      font-weight: bold;
+      background-color: #f0f0f0;
+    }
         .subscription-box-button {
           margin-bottom: 3rem;
         }
@@ -240,14 +253,15 @@ html {
 /*************************************************/
 /* 6 */
     ._6-footer {
-        width: 75rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        background-color: black;
-        color: white;
-      }
+      width: 100%;
+      max-width: 75rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      background-color: black;
+      color: white;
+    }
       .footer-connection {
         display: flex;
         flex-direction: row;
