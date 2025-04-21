@@ -64,11 +64,9 @@
                     <span class="Eng-and-Web-box-web-info-box">
                         <p class="the-title">The<br>Web Developer</p>
                         <p class="the-brief">I am a Web Developer</p>
-                        <form action="{% url 'web_projects' %}">
-                            <button class="Eng-and-Web-box-button" type="submit">
-                                <p class="Eng-and-Web-box-button-text">Read More</p>
-                            </button>                          
-                        </form>
+                        <a href="{% url 'web_projects' %}" class="btn-link">
+                            <p class="Eng-and-Web-box-button-text">Read More</p>
+                        </a>
                     </span>
                     <span class="Eng-and-Web-box-web-img-box">
                         <img class="Eng-and-Web-box-web-img" src="{% static '/images/Web_developer_img.png' %}">

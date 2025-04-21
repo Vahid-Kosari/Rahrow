@@ -16,6 +16,29 @@ html {
   .corridor-Expalnation-box-button {
     width: 20rem;
   }
+  .btn-link {
+    display: inline-block;
+    background-color: black; /* Green or your theme color */
+    color: white;
+    width: 7rem;
+    padding: 1px 6px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-link:hover {
+    background-color: gray; /* Slightly darker green */
+}
+
+.btn-text {
+    margin: 0;
+}
+
 
   /*************************************************/
   /* 0 */
