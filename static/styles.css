@@ -18,7 +18,7 @@ html {
   }
   .btn-link {
     display: inline-block;
-    background-color: black; /* Green or your theme color */
+    background-color: black;
     color: white;
     width: 7rem;
     padding: 1px 6px;
@@ -32,7 +32,7 @@ html {
 }
 
 .btn-link:hover {
-    background-color: gray; /* Slightly darker green */
+    background-color: gray;
 }
 
 .btn-text {
@@ -191,19 +191,34 @@ html {
         align-items: center;
       }
       .FAQ-accordion-box-q-icon {
-        width: 1rem;
-        /* padding: 0.5rem; */
+        width: 1.5rem;
+        padding: 0.5rem;
         vertical-align: middle;
-      }
-      .FAQ-accordion-box-q-icon-cross {
-        display: none;
       }
       .FAQ-accordion-box-q-text {
         padding: 0.5rem;
         vertical-align: middle;
       }
       .FAQ-accordion-a {
+        display: none;
         margin-left: 2rem;
+      }
+      .FAQ-accordion.open .FAQ-accordion-a {
+        display: block;
+      }
+      .FAQ-accordion-box-q-icon {
+        transition: transform 0.3s ease;
+      }
+      
+      /* Rotated when open */
+      .FAQ-accordion.open .FAQ-accordion-box-q-icon {
+        transform: rotate(45deg);
+      }
+      
+      /* Fix pointer style */
+      .FAQ-accordion-box-q-text {
+        cursor: default;
+        user-select: none;   /* optional: prevent text selection */
       }
 
 /*************************************************/
