@@ -61,7 +61,6 @@ html {
 /* 1 */
     .corridor-text {
       display: block;
-      /* max-width: 70%; */
       justify-self: center;
       text-align: center;
       font-size: 3rem;
@@ -276,7 +275,7 @@ html {
           font-size: 14px;
         }
       
-        .corridor-img {
+        .corridor-img img{
           justify-self: center;
           width: 90%;
         }
