@@ -50,19 +50,19 @@ html {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* gap: 2rem; */
-        /* margin: 0; */
-        /* padding: 2rem; */
         min-height: 100vh;
         box-sizing: border-box;
       }
       
 /*************************************************/
 /* 1 */
+  ._1-corridor-sec {
+    align-items: center;
+  }
     .corridor-text {
       display: block;
       justify-self: center;
-      text-align: center;
+      align-items: center;
       font-size: 3rem;
       font-weight: bold;
       color: #333;
