@@ -1,6 +1,7 @@
 html {
     font-size: 16px;
 }
+
   body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,10 +15,7 @@ html {
     background-color: black;
     border-radius: 0.5rem;
   }
-  .corridor-Expalnation-box-button {
-    width: 100%;
-    max-width: 20rem;
-  }
+  
   .btn-link {
     display: inline-block;
     background-color: black;
@@ -34,6 +32,11 @@ html {
     transition: background-color 0.3s ease;
   }
 
+  .corridor-Expalnation-box-button {
+    width: 100%;
+    max-width: 20rem;
+  }
+
 .btn-link:hover {
     background-color: gray;
 }
@@ -41,7 +44,6 @@ html {
 .btn-text {
     margin: 0;
 }
-
 
   /*************************************************/
   /* 0 */
