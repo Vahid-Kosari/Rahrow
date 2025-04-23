@@ -38,22 +38,23 @@ html {
       background-color: gray;
   }
 
-
   /*************************************************/
   /* 0 */
     ._0-main-container {
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
+        --maximum-width: 100%;
+        width: var(--maximum-width);
         align-items: center;
-        min-height: 100vh;
+        /* min-height: 100vh;
+        min-width: 100vh; */
         box-sizing: border-box;
       }
       
 /*************************************************/
 /* 1 */
   ._1-corridor-sec {
-    width: 100%;
+    width: var(--maximum-width);
     align-items: center;
   }
     .corridor-text {
@@ -66,10 +67,9 @@ html {
     }
     img.corridor-img {
       display: block;
-      /* align-self: center; */
       justify-self: center;
       width: 100%;
-      max-width: 60rem;
+      max-width: calc(0.6 * var(--maximum-width));
       aspect-ratio: 1.7777777777777777 / 1;
       border-radius: 1.2rem;
     }
@@ -86,7 +86,7 @@ html {
 /* 2 */
     .links-box {
       width: 100%;
-      /* max-width: 50rem; */
+      max-width: calc(0.5 * var(--maximum-width));
       display: flex;
       flex-direction: row;
       justify-content: space-around;
@@ -109,7 +109,8 @@ html {
 /* 3 */
     ._3-Eng-and-Web-sec {
       width: 100%;
-      max-width: 75rem;
+      max-width: var(--maximum-width);
+      /* max-width: calc(0.75 * var(--maximum-width)); */
       background-color: #f0f0f0;
     }
       .Eng-and-Web-box {
@@ -126,21 +127,24 @@ html {
       .Eng-and-Web-box-info-box {
         display: flex;
         flex-direction: column;
-        /* gap: 1rem; */
         justify-content: space-evenly;
         height: 20rem;
-        width: 100%;
-        max-width: 28rem;
+        /* width: 100%; */
+        width: calc(0.45 * var(--maximum-width));
       }
         .Eng-and-Web-box-eng {
           display: flex;
           flex-direction: row;
-          gap: 3rem;
+          width: 80%;
+          justify-content: space-evenly;
+          gap: 1rem;
         }
         .Eng-and-Web-box-web {
           display: flex;
           flex-direction: row-reverse;
-          gap: 3rem;
+          width: 80%;
+          justify-content: space-evenly;
+          gap: 1rem;
         }
         .the-title {
           text-align: center;
@@ -157,12 +161,10 @@ html {
     ._4-FAQ {
         display: flex;
         flex-direction: column;
-        --container-max-width: 60rem;
-        --hr-offset: 5rem;
+        --container-max-width: calc(0.75 * var(--maximum-width));
+        --hr-offset: calc(0.05 * var(--maximum-width));
         width: 100%;
         max-width: var(--container-max-width);
-        /* vertical-align: middle; */
-        /* align-self: center; */
       }
       .FAQ-text {
         align-self: center;
@@ -170,25 +172,24 @@ html {
         font-weight: bold;
       }
       .FAQ-accardion {
-        --hr-offset: 5rem;
         width: 100%;
-        max-width: var(--container-max-width);
+        /* max-width: var(--container-max-widt  h); */
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* margin: 2rem; */
         border-radius: 1rem 1rem 0rem 0rem;
         background-color: #f0f0f0;
       }
       hr {
-        width: 100%;
-        max-width: calc(var(--container-max-width) - var(--hr-offset));
+        width: 90%;
+        /* max-width: calc(var(--container-max-width) - var(--hr-offset)); */
         transition: width 0.3s ease;
         color: #333;
       }
       .FAQ-accordion-button{
         width: 100%;
         max-width: 10rem;
+        /* max-width: calc(0.2 * var(--maximum-width)); */
         align-self: center;
         margin: 3rem;
       }
@@ -236,7 +237,7 @@ html {
 /* 5 */
   ._5-subscription {
     width: 100%;
-    /* max-width: 75rem; */
+    /* max-width: calc(0.75 * var(--maximum-width)); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -262,7 +263,7 @@ html {
 /* 6 */
   ._6-footer {
     width: 100%;
-    /* max-width: 75rem; */
+    /* max-width: calc(0.75 * var(--maximum-width)); */
     display: flex;
     flex-direction: row;
     align-items: center;
