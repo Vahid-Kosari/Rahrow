@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles-w.css' %}?v=4.0" />
+    <link rel="icon" type="image/png" href="{% static 'images/Projects-Icon.png' %}" />
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        <span class="my_name">Vahid Kosari</span>
+        <span class="navigation">
+            <a href="https://www.rahrow.ca" class="back_to_corridor">Back to corridor</a>
+            <img src="{% static 'images/Icon.png' %}">
+        </span>
+    </header>
+    <main>
+        <section class="introduction">
+            <h2>Work Collection</h2>
+            <h2>{{ title }}</h2>
+        </section>
+
+        <section class="projects_box">
+            <div class="projects_up">
+                <span class="projects_up_first">
+                    <img src="{% static 'images/Projects_Icon.png' %}" class="projects_image" title="first">
+                </span>
+            </div>
+            <div class="projects_down">
+                <span class="projects_down_first">
+                    <img src="{% static 'images/Projects_Icon.png' %}" class="projects_image" title="first">
+                </span>
+                <span class="projects_down_second">
+                    <img src="{% static 'images/Projects_Icon.png' %}" class="projects_image" title="first">
+                </span>
+                <span class="projects_down_third">
+                    <img src="{% static 'images/Projects_Icon.png' %}" class="projects_image" title="first">
+                </span>
+            </div>
+        </section>
+
+        <section class="content">
+            <span class="overview">
+                <h3>Overview</h3>
+                <p>This is the overview</p>
+            </span>
+            <span class="approach">
+                <h3>Approach</h3>
+                <p>This is the approach</p>
+            </span>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; {{ year }} Vahid Kosari. All rights reserved.</p>
+    </footer>
+</body>
+</html>

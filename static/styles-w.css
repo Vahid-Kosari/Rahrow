@@ -1,0 +1,69 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.back_to_corridor, .my_name {
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.projects_box {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.projects_up {
+    align-self: center;
+    /* width: 100%; */
+}
+
+.projects_box .projects_down {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.projects_image {
+    scale: 0.2;
+}
+
+.footer {
+    justify-items: center;
+}

@@ -11,4 +11,16 @@ def homepage(request):
 
 
 def web_projects(request):
-    return render(request, 'web_projects.html')
+    return render(request, 'web_projects.html',
+                  {
+                      "title": "Web Developer",
+                      "year": timezone.now().year,
+                  })
+
+
+def eng_projects(request):
+    return render(request, 'eng_projects.html',
+                  {
+                      "title": "Mechanical Engineer",
+                      "year": timezone.now().year,
+                  })
