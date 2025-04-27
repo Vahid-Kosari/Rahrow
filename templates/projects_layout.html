@@ -2,59 +2,97 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'styles-w.css' %}?v=4.0" />
-    <link rel="icon" type="image/png" href="{% static 'images/Projects-Icon.png' %}" />
-    <title>{{ title }}</title>
-</head>
-<body>
-    <header>
-        <span class="my_name">Vahid Kosari</span>
-        <span class="navigation">
-            <a href="https://www.rahrow.ca" class="back_to_corridor">Back to corridor</a>
-            <img src="{% static 'images/Icon.png' %}">
-        </span>
-    </header>
-    <main>
-        <section class="introduction">
-            <h2>Work Collection</h2>
-            <h2>{{ title }}</h2>
-        </section>
-
-        <section class="projects_box">
-            <div class="projects_up">
-                <span class="projects_up_first">
-                    <img src="{% static 'images/Projects_Icon.png' %}" class="projects_image" title="first">
-                </span>
-            </div>
-            <div class="projects_down">
-                <span class="projects_down_first">
-                    <img src="{% static 'images/Projects_Icon.png' %}" class="projects_image" title="first">
-                </span>
-                <span class="projects_down_second">
-                    <img src="{% static 'images/Projects_Icon.png' %}" class="projects_image" title="first">
-                </span>
-                <span class="projects_down_third">
-                    <img src="{% static 'images/Projects_Icon.png' %}" class="projects_image" title="first">
-                </span>
-            </div>
-        </section>
-
-        <section class="content">
-            <span class="overview">
-                <h3>Overview</h3>
-                <p>This is the overview</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'styles-w.css' %}?v=4.0" />
+        <link rel="icon" type="image/png" href="{% static 'images/Projects-Icon.png' %}" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <header>
+            <span class="my_name">Vahid Kosari</span>
+            <span class="navigation">
+                <a href="{% url 'home' %}" class="back_to_corridor">Back to corridor</a>
+                <img src="{% static 'images/Icon.png' %}">
             </span>
-            <span class="approach">
-                <h3>Approach</h3>
-                <p>This is the approach</p>
-            </span>
-        </section>
-    </main>
-    <footer class="footer">
-        <p>&copy; {{ year }} Vahid Kosari. All rights reserved.</p>
-    </footer>
-</body>
+        </header>
+        <main>
+            <section class="introduction">
+                <h2>Work Collection</h2>
+                <h2>{{ title }}</h2>
+            </section>
+
+            <section class="projects_box">
+                <div class="projects_up">
+                    <span class="projects_up_first">
+                        <a href="{% url 'home' %}" target="true">
+                            <img src="{% static 'images/Projects_Icon.png' %}" class="projects_image" title="first">
+                        </a>
+                    </span>
+                </div>
+                <!-- https://getbootstrap.com/docs/5.3/components/carousel/ -->
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="https://www.rahrow.ca/web_projects/search/" class="d-block-a" target="true">
+                                <img src="{% static 'images/web_projects/search.png' %}" class="d-block w-100" alt="...">
+                            </a>
+                            <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.rahrow.ca/web_projects/wiki/" class="d-block-a" target="true">
+                            <img src="{% static 'images/web_projects/wiki.png' %}" class="d-block w-100" alt="...">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.rahrow.ca/web_projects/commerce/" class="d-block-a" target="true">
+                            <img src="{% static 'images/web_projects/commerce.png' %}" class="d-block w-100" alt="...">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="content">
+                <span class="overview">
+                    <h3>Overview</h3>
+                    <p>This is the overview</p>
+                </span>
+                <span class="approach">
+                    <h3>Approach</h3>
+                    <p>This is the approach</p>
+                </span>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>&copy; {{ year }} Vahid Kosari. All rights reserved.</p>
+        </footer>
+    </body>
 </html>

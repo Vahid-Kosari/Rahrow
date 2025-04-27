@@ -5,6 +5,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 header {
@@ -29,17 +30,20 @@ header {
 main {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .introduction {
     display: flex;
     flex-direction: column;
+    /* width: 100%; */
     justify-content: space-evenly;
 }
 
 .projects_box {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-items: center;
 }
 
@@ -48,11 +52,21 @@ main {
     /* width: 100%; */
 }
 
-.projects_box .projects_down {
+.carousel {
+    width: 80%;
+}
+.d-block {
+    justify-self: center;
+    
+}
+.carousel-inner {
+    align-items: center;
+}
+/* .projects_box .projects_down {
     display: flex;
     flex-direction: row;
     width: 100%;
-}
+} */
 
 .content {
     display: flex;
