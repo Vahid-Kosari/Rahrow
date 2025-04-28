@@ -26,6 +26,9 @@ header {
     font-size: 2rem;
     color: black;
 }
+.my_logo {
+    scale: 0.3;
+}
 
 main {
     display: flex;
@@ -36,7 +39,6 @@ main {
 .introduction {
     display: flex;
     flex-direction: column;
-    /* width: 100%; */
     justify-content: space-evenly;
 }
 
@@ -49,7 +51,7 @@ main {
 
 .projects_up {
     align-self: center;
-    /* width: 100%; */
+    width: 80%;
 }
 
 .carousel {
@@ -57,7 +59,7 @@ main {
 }
 .d-block {
     justify-self: center;
-    
+
 }
 .carousel-inner {
     align-items: center;
@@ -67,6 +69,9 @@ main {
     flex-direction: row;
     width: 100%;
 } */
+
+  
+
 
 .content {
     display: flex;

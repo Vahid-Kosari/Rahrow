@@ -1,0 +1,85 @@
+{% load static %}
+
+<section class="projects_box">
+    <div class="projects_up">
+        <div class="card text-bg-dark">
+            <a href="https://www.rahrow.ca/web_projects/capstone/" class="d-block-a" target="true">
+                <img src="{% static 'images/web_projects/capstone.png' %}" class="card-img" alt="...">
+            </a>
+            <div class="card-img-overlay">
+            <a href="https://www.rahrow.ca/web_projects/capstone/"><h5 class="card-title" target="true">Fenjan</h5></a>
+              <p class="card-text">This web application is the capstone project for 
+                <a href="https://www.edx.org/learn/web-development/harvard-university-cs50-s-web-programming-with-python-and-javascript" target="true">CS50W</a>
+                 course for Hrward Online University.</p>
+              <p class="card-text"><small>This app searches LinkedIn for the provided keywords and returns results as a page and sending email.</small></p>
+            </div>
+          </div>
+    </div>
+    <!-- https://getbootstrap.com/docs/5.3/components/card/#grid-cards -->
+    
+    <!-- https://getbootstrap.com/docs/5.3/components/carousel/ -->
+    <div id="carouselExampleCaptions" class="carousel slide projects_down">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="https://www.rahrow.ca/web_projects/search/" class="d-block-a" target="true">
+                    <img src="{% static 'images/web_projects/search.png' %}" class="d-block w-100" alt="...">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Search Project</h5>
+                    <p>This page mimics google page.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.rahrow.ca/web_projects/wiki/" class="d-block-a" target="true">
+                    <img src="{% static 'images/web_projects/wiki.png' %}" class="d-block w-100" alt="...">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Wiki Project</h5>
+                    <p>this project is a simplified version of wiki that follows markdown.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.rahrow.ca/web_projects/commerce/" class="d-block-a" target="true">
+                    <img src="{% static 'images/web_projects/commerce.png' %}" class="d-block w-100" alt="...">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Commerce Project</h5>
+                    <p>This a market place to post auctions and put bid.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.rahrow.ca/web_projects/mail/" class="d-block-a" target="true">
+                    <img src="{% static 'images/web_projects/mail.png' %}" class="d-block w-100" alt="...">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Mail Project</h5>
+                    <p>This application is a virtual mail provider to send and receive emails.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.rahrow.ca/web_projects/network/" class="d-block-a" target="true">
+                    <img src="{% static 'images/web_projects/network.png' %}" class="d-block w-100" alt="...">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Network Project</h5>
+                    <p>This is a simplified X like platform to create posts and interact.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="false"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>

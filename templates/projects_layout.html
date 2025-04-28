@@ -1,3 +1,4 @@
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -16,7 +17,7 @@
             <span class="my_name">Vahid Kosari</span>
             <span class="navigation">
                 <a href="{% url 'home' %}" class="back_to_corridor">Back to corridor</a>
-                <img src="{% static 'images/Icon.png' %}">
+                <img src="{% static 'images/Icon.png' %}" class="my_logo">
             </span>
         </header>
         <main>
@@ -25,60 +26,13 @@
                 <h2>{{ title }}</h2>
             </section>
 
-            <section class="projects_box">
-                <div class="projects_up">
-                    <span class="projects_up_first">
-                        <a href="{% url 'home' %}" target="true">
-                            <img src="{% static 'images/Projects_Icon.png' %}" class="projects_image" title="first">
-                        </a>
-                    </span>
-                </div>
-                <!-- https://getbootstrap.com/docs/5.3/components/carousel/ -->
-                <div id="carouselExampleCaptions" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href="https://www.rahrow.ca/web_projects/search/" class="d-block-a" target="true">
-                                <img src="{% static 'images/web_projects/search.png' %}" class="d-block w-100" alt="...">
-                            </a>
-                            <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="https://www.rahrow.ca/web_projects/wiki/" class="d-block-a" target="true">
-                            <img src="{% static 'images/web_projects/wiki.png' %}" class="d-block w-100" alt="...">
-                        </a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="https://www.rahrow.ca/web_projects/commerce/" class="d-block-a" target="true">
-                            <img src="{% static 'images/web_projects/commerce.png' %}" class="d-block w-100" alt="...">
-                        </a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="false"></span>
-                    <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </section>
+            {% if title == "Web Developer" %}  
+                {% include "web_projects_box.html" %}
+            {% else %}
+            <h1>No projects yet!</h1>  
+            {% endif %}  
+
+
 
             <section class="content">
                 <span class="overview">
