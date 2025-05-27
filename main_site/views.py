@@ -13,7 +13,7 @@ def homepage(request):
 def web_projects(request):
     return render(request, 'web_projects.html',
                   {
-                      "title": "Web Developer",
+                      "title": "Software Engineer",
                       "year": timezone.now().year,
                   })
 
@@ -24,3 +24,7 @@ def eng_projects(request):
                       "title": "Mechanical Engineer",
                       "year": timezone.now().year,
                   })
+
+
+def wordpress_blog(request):
+    return render(request, 'wordpress_blog.html')

@@ -26,10 +26,10 @@
                 <h2>{{ title }}</h2>
             </section>
 
-            {% if title == "Web Developer" %}  
+            {% if title == "Software Engineer" %}  
                 {% include "web_projects_box.html" %}
             {% else %}
-            <h1>No projects yet!</h1>  
+                {% include "eng_projects_box.html" %}
             {% endif %}  
 
 
