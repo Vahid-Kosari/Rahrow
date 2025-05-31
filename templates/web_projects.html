@@ -1,5 +1,26 @@
 {% extends "projects_layout.html" %}
 
-{% block body %}
+{% block introduction %}
+    <section class="introduction">
+        <h2>Work Collection</h2>
+        <!-- <h2>{{ title }}</h2> -->
+    </section>
+{% endblock %}
+
+{% block projects_box %}
+    {% include "web_projects_box.html" %}
+{% endblock %}
+
+{% block content %}
+    <section class="content">
+        <span class="overview">
+            <h3>Overview</h3>
+            <p>This is the overview</p>
+        </span>
+        <span class="approach">
+            <h3>Approach</h3>
+            <p>This is the approach</p>
+        </span>
+    </section>
 {% endblock %}
 

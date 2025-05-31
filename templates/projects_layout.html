@@ -7,9 +7,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% if title == "Software Engineer" %}
-            <link rel="stylesheet" href="{% static 'styles-w.css' %}?v=4.0" />
+            <link rel="stylesheet" href="{% static 'styles-w.css' %}?v=4.1" />
         {% else %}
-            <link rel="stylesheet" href="{% static 'styles-m.css' %}?v=1.0" />
+            <link rel="stylesheet" href="{% static 'styles-m.css' %}?v=2.0" />
         {% endif %} 
         <link rel="stylesheet" href="{% static 'styles-w.css' %}?v=4.0" />
         <link rel="icon" type="image/png" href="{% static 'images/Projects-Icon.png' %}" />
@@ -19,34 +19,23 @@
     </head>
     <body>
         <header>
-            <span class="my_name">Vahid Kosari</span>
+            <span class="my_name">Vahid Kosari - {{ title }}</span>
             <span class="navigation">
                 <a href="{% url 'home' %}" class="back_to_corridor">Back to corridor</a>
                 <img src="{% static 'images/Icon.png' %}" class="my_logo">
             </span>
         </header>
         <main>
-            <section class="introduction">
-                <h2>Work Collection</h2>
-                <h2>{{ title }}</h2>
-            </section>
 
-            {% if title == "Software Engineer" %}  
-                {% include "web_projects_box.html" %}
-            {% else %}
-                {% include "eng_projects_box.html" %}
-            {% endif %}  
+            {% block introduction %}
+            {% endblock %}
 
-            <section class="content">
-                <span class="overview">
-                    <h3>Overview</h3>
-                    <p>This is the overview</p>
-                </span>
-                <span class="approach">
-                    <h3>Approach</h3>
-                    <p>This is the approach</p>
-                </span>
-            </section>
+            {% block projects_box %}
+            {% endblock %}
+
+            {% block content %}
+            {% endblock %}
+            
         </main>
         <footer class="footer">
             <p>&copy; {{ year }} Vahid Kosari. All rights reserved.</p>
