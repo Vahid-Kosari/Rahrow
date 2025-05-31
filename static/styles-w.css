@@ -22,13 +22,14 @@ header {
     align-items: center;
 }
 
-.back_to_corridor, .my_name {
+.name_title, .back_to_corridor {
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2vw;
     color: black;
 }
 .my_logo {
-    scale: 0.3;
+    scale: 0.5;
+    width: 7vw;
 }
 
 main {

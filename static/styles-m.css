@@ -25,26 +25,26 @@ header {
     align-items: center;
 }
 
-.back_to_corridor, .my_name {
+.name_title, .back_to_corridor {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 2vw;
     color: black;
 }
 .my_logo {
-    scale: 0.3;
-    width: 7rem;
+    scale: 0.5;
+    width: 7vw;
 }
 
 main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 90%;
+    height: 85%;
 }
 
 .projects_box {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     align-items: center;
     justify-items: center;
     width: 100%;
@@ -58,4 +58,5 @@ main {
 
 .footer {
     justify-items: center;
+    height: 5%;
 }
